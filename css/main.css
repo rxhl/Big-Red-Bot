@@ -1,15 +1,40 @@
 html, body  {
 	margin: 0;
+    padding: 0;
     font-family: 'Open Sans', sans-serif;
 
 }
 body {
-    background-image: url("http://feelgrafix.com/data_images/out/28/999698-cornell-university.jpg");
+    background-image: url("https://raw.githubusercontent.com/rxhl/Big-Red-Bot/gh-pages/img/cornell.jpg");
     background-attachment: fixed; 
+    background-position: center;  
+    background-size: 100% 100%;
+
+    
 }
 
-#primary {
-	width: 70%;
-    border-bottom: 6px solid slateblue;
+#primary-out {
+    width: 80%;
+    border-bottom: 10px solid darkred;
+    border-top: 10px solid darkred;
     background-color: ghostwhite;
+    margin: auto;
+    display: block;
+    opacity: 0.97;
+
+}
+
+#primary-in {
+    padding: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#title {
+    font-family: 'Cinzel', serif;    
+    text-align: center;
+    font-size: 30px;
+    color: darkred;
+
+    
 }
