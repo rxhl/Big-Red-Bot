@@ -16,25 +16,89 @@ body {
 #primary-out {
     width: 80%;
     border-bottom: 10px solid darkred;
-    border-top: 10px solid darkred;
     background-color: ghostwhite;
     margin: auto;
     display: block;
     opacity: 0.97;
-
+    margin-bottom: 50px;
 }
 
 #primary-in {
-    padding: 25px;
+    padding-left: 25px; /*Adding white space*/
+    padding-right: 25px;
+    padding-bottom: 25px;
     text-align: center;
-    margin-top: 20px;
 }
 
 #title {
-    font-family: 'Cinzel', serif;    
+    font-family: 'Pacifico', cursive;   
+    text-shadow: 5px 5px lightgrey;
     text-align: center;
     font-size: 30px;
     color: darkred;
+}
 
-    
+
+.nav ul {
+  list-style: none;
+  background-color: grey;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+}
+
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: ghostwhite;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  background-color: darkred;
+}
+ 
+.nav a.active {
+  background-color: ghostwhite;
+  color: #444;
+  cursor: default;
+}
+ 
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+ 
+  /* Option 1 - Display Inline */
+  .nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+ 
+  /* Options 2 - Float
+  .nav li {
+    float: left;
+  }
+  .nav ul {
+    overflow: auto;
+    width: 600px;
+    margin: 0 auto;
+  }
+  .nav {
+    background-color: #444;
+  }
+  */
 }
