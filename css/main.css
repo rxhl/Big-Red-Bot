@@ -44,39 +44,48 @@ body {
     color: darkred;
 }
 
+#footerText {
+	margin-top: 20px;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+.fb-comments, .fb-comments * {
+    width:100% !important;
+}
 
 .nav ul {
-  list-style: none;
-  background-color: grey;
-  text-align: center;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    background-color: grey;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 
 }
 
 .nav li {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
-  border-bottom: 1px solid #888;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
+    border-bottom: 1px solid #888;
 }
  
 .nav a {
-  text-decoration: none;
-  color: ghostwhite;
-  display: block;
-  transition: .3s background-color;
+    text-decoration: none;
+    color: ghostwhite;
+    display: block;
+    transition: .3s background-color;
 }
  
 .nav a:hover {
-  background-color: darkred;
+	background-color: darkred;
 }
  
 .nav a.active {
-  background-color: ghostwhite;
-  color: #444;
-  cursor: default;
+  	background-color: ghostwhite;
+  	color: darkred;
+  	cursor: default;
 }
  
 @media screen and (min-width: 600px) {
@@ -87,24 +96,8 @@ body {
     line-height: 50px;
     font-size: 1.4em;
   }
- 
-  /* Option 1 - Display Inline */
-  .nav li {
+    .nav li {
     display: inline-block;
     margin-right: -4px;
   }
- 
-  /* Options 2 - Float
-  .nav li {
-    float: left;
-  }
-  .nav ul {
-    overflow: auto;
-    width: 600px;
-    margin: 0 auto;
-  }
-  .nav {
-    background-color: #444;
-  }
-  */
 }
