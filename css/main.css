@@ -1,16 +1,23 @@
 html, body  {
 	margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
-
 }
+
 body {
     background-image: url("https://raw.githubusercontent.com/rxhl/Big-Red-Bot/gh-pages/img/cornell.jpg");
     background-attachment: fixed; 
     background-position: center;  
     background-size: 100% 100%;
+}
 
-    
+.Heading {
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+}
+
+.contents {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
 }
 
 #primary-out {
@@ -27,7 +34,6 @@ body {
     padding-left: 25px; /*Adding white space*/
     padding-right: 25px;
     padding-bottom: 25px;
-    text-align: center;
 }
 
 #title {
