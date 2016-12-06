@@ -4,7 +4,7 @@
 #******************************************
 #******************************************
 # Cornell University
-# ECE 5725: Big-Red-Bot
+# ECE 5725: Web-App based Robot Control(Webo-Pi)
 # Authors: ms3368,rs2376
 #
 #******************************************
@@ -133,6 +133,11 @@ def run_test():
     time.sleep(1)
     return
         
+
+
 # start the main loop
 if __name__ == '__main__':
     run_test()
+
+    
+    

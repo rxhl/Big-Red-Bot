@@ -1,23 +1,81 @@
-<!DOCTYPE HTML>  
+<!doctype html>  
 <html>  
 <head>  
-<title>Big-Red-Bot</title>
-<link rel="favicon" href="img/cor.png" type="image/cornell">
-<link rel="stylesheet" href="css/main.css" type="text/css">
+<title>Webo-Pi</title>
+<img src="/static/cornell_logo.jpg" width= 1350px height= 250px>
 </head> 
+<style>
+	b1 {
+		width: 800px;
+		color: black;
+		font-size: 150%;
+		font-weight: bold;
+		position: absolute;
+		top: 50%;
+		left: 40%;
+		margin-top: -40px;
+		margin-left: -250px;
+	}
+	.container {
+		position: absolute;
+		top: 70%;
+		left: 80%;
+		margin-top: -40px;
+		margin-left: -40px;
+	}
+	
+	p2 {
+		position: absolute;
+		top: 60%;
+		left: 5%;
+		margin-top: -80px;
+		margin-left: -40px;
+	}
+	
+	p3 {
+		width: 200px;
+		color: #42CD42;
+		font-size: 120%;
+		font-weight: bold;
+		position: absolute;
+		top: 50%;
+		left: 60%;
+		margin-top: -40px;
+		margin-left: -250px;
+
+	}
+
+	p{
+		color: #EF1355
+	}
+	
+	.container {
+		color: #433E3F
+	}
+
+	p4 {
+		position: absolute;
+		top: 75%;
+		left:  40%;
+		margin-top: -80px;
+		margin-left: -70px;
+	}
+</style> 
 <body>  
+
 <form action="/login", method="post">
+
 	<div>
 		<label><b1>
 		<p3>ECE 5725</p3>
 		<br></br>
-		<p>Big-Red-Bot</p>
+		<p>Web-App based Robot control using Raspberry-Pi</p>
 		</b1></label>
 	</div>
 	
-	<p2><img src="img/raspberry-pi-logo.png" width= 150px height= 150px></p2>
+	<p2><img src="/static/raspberry-pi-logo.png" width= 150px height= 150px></p2>
 	
-	<p4><img src="img/rpi.jpg" width= 220px height= 220px></p4>
+	<p4><img src="/static/rpi.jpg" width= 220px height= 220px></p4>
 
 	<div class="container">
 		<label><b>Username</b></label>
@@ -31,6 +89,7 @@
 			<p>{{error}}</p>
 		{% endif %}
 	</div>
+
 </form>
 </body>  
 </html>

@@ -4,8 +4,8 @@
 #******************************************
 #******************************************
 # Cornell University
-# ECE 5725 Fall 2016: Big-Red-Bot
-# Authors: Mahantesh Salimath (ms3368), Rahul Sharma (rs2376)
+# ECE 5725: Web-App based Robot Control(Webo-Pi)
+# Authors: Mahantesh Salimath, Rahul Sharma
 #
 #******************************************
 #******************************************
@@ -68,3 +68,6 @@ if __name__ == '__main__':
 	args =parser.parse_args()
 	#Start the server.
 	start_server(args)
+	
+
+
