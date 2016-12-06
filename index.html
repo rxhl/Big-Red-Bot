@@ -5,12 +5,11 @@
 <!--[if gte IE 9]><!--><html><!--<![endif]-->
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title id="bigred">Big Red Bot</title>
     <link rel="favicon" href="img/cor.png" type="image/cornell">
     <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans:300|Cinzel:700|Pacifico|Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Cinzel:700|Pacifico|Oswald" rel="stylesheet">
 </head>
 <body>
     <div id="fb-root"></div>
@@ -19,37 +18,106 @@
       <ul>
         <li class="home"><a href="#bigred">Home</a></li>
         <li class="design"><a href="#design">Design</a></li>
+		<li class="result"><a href="#result">Result</a></li>
         <li class="team"><a href="#team">Team</a></li>
         <li class="code"><a href="https://github.com/rxhl/Big-Red-Bot" target="_blank">Code</a></li>
       </ul>
     </div>
-<div id="title"><h1>Big Red Robot</h1></div>             
+	<div id="title"><h1>Big Red Bot</h1></div>             
     <hr style="width: 95%">
     <div id="primary-in">
-    <h2 class="Heading">Introduction</h2>          
-    <p class="contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>   
+    <h2 class="Heading">Objective</h2> 
+	<p class="contents">The primary objective of the project is to create a robot that can be maneuvered remotely using any device connected to the internet, in a secure manner. The bot employs a Raspberry Pi 2 Model B at its core, gives a live video feed using camera module and hosts a Flask server that contains the GUI to control the bot. The Flask application also conducts user authentication to provide access to registered users only.</p><br>   
     <hr style="width: 100%">
-    <h2 class="Heading" id="design">Design</h2>
-    <p class="contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br/>
+    <h2 class="Heading"	>Introduction</h2>
+    <p class="contents">Playing with remote controlled gears is an engaging experience, which almost everyone has gone through while growing up. Taking the same essence forward, we built the Big-Red-Bot (BRB) which is a Raspberry Pi powered bot capable of being controlled by any device over Wi-Fi viz. laptop, tablet and mobile. The bot is controlled via a Flask app which is hosted on the Pi itself and commands can be sent to the bot through HTTP request from the user's device.<br><br>
+	As soon as a user accesses BRB's IP address, he/she is presented with a login screen. The user can access the maneuver dashboard only after a successful login. New users can be added only by admins. The bot, upon receiving the commands from the user, calls appropriate functions to control the two servo motors to go forward/backward/left/right and vary its speed. BRB also has a camera module attached to it that provides a live video feed of the path. 
+	</p><br><hr>
+    <h2 class="Heading" id="design">Design &amp; Testing</h2>
+	<h3 class="Heading">Overview</h3>
+    <p class="contents">
+	The design and testing process is broadly divided in three phases - Network, Web App and Motor Control. Before we dive deep in any of them, below is a block diagram that summarizes the complete design process.<br><br>{block diagram}<br><br>
+	As shown above, Pi houses both the server (Flask) and the motor control module. Once the user successfully logs in, the server renders a HTML document containing a dashboard to control the bot as well as display the camera feed.
+	<br><br>{Dashboard screens}<br><br></p>
+	<h3 class="Heading">Network</h3>
+	<p class="contents">
+	To provide wireless capabilities to the bot, we used the Edimax Wi-Fi module [1]. We implemented two types of network connections for this project i.e. Ad Hoc and regular Wi-Fi. The main advantage of Ad Hoc is that it does not require any external Wi-Fi to connect to the client. The client can simply join the Ad Hoc and access bot controls. This is particularly useful when the user wants to take the bot outdoors where there is no Wi-Fi. The steps to configure an Ad Hoc network [2] on Pi are below.<br><br>
+	First, open the network interfaces file for editing.
+		
+	<div class="coder"><code>&#36; sudo nano /etc/network/interfaces</code></div>
+		
+	<p class="contents">Next, edit the file as follows.</p>
+		
+	<div class="coder"><code>auto lo</code><br>
+	<code>iface lo inet loopback</code><br>
+	<code>iface eth0 inet dhcp</code><br><br>
+ 
+	<code>auto wlan0</code><br>
+	<code>iface wlan0 inet static</code><br>
+  	<code>address 192.168.1.1</code><br>
+  	<code>netmask 255.255.255.0</code><br>
+  	<code>wireless-channel 1</code><br>
+  	<code>wireless-essid RPiAdHocNetwork</code><br>
+  	<code>wireless-mode ad-hoc</code></div>
+		
+	<p class="contents">Now, restart the wireless connection.</p>
+	
+	<div class="coder"><code>&#36; sudo ifdown wlan0</code><br>
+	<code>&#36; sudo ifup wlan0</code></div>
+		
+	<p class="contents">At this point, we have configured the Pi to host an Ad Hoc network but to make other devices connect to it and communicate effectively, we need to install the DHCP server on it so that the Pi can assign IP addresses to its clients.</p>
+	
+	<div class="coder"><code>&#36; sudo apt-get update</code><br>
+	<code>&#36; sudo apt-get install dhcp3-server</code></div>
+	
+	<p class="contents">Once the installation is done, we need to update the config file.</p>
+	
+	<div class="coder"><code>&#36; sudo nano /etc/dhcp/dhcpd.conf</code></div>
+	
+	<p class="contents">Update it with the following.</p>
+	
+	<div class="coder"><code>ddns-update-style interim;</code><br>
+	<code>default-lease-time 600;</code><br>
+	<code>max-lease-time 7200;</code><br>
+	<code>authoritative;</code><br>
+	<code>log-facility local7;</code><br>
+	<code>subnet 192.168.1.0 netmask 255.255.255.0 {</code><br>
+	<code>range 192.168.1.5 192.168.1.150;}</code></div>
+
+	<p class="contents">The Pi is now ready to communicate with the client. However, we observed that the Ad Hoc method worked successfully only with a PC and not any other platform. We were able to connect iOS and OS X devices to the Ad Hoc netowork hosted by the Pi but could not access the web application. To overcome this problem, we used both the Wi-Fi adapters available on the Pi. We configured <code>wlan0</code> for hosting an Ad Hoc network and <code>wlan1</code> as a regular client which would connect to an external Wi-Fi. So far, we have successfully set up our network and can move ahead to setting up our web application.</p></p><br>
+	
+	<h3 class="Heading">Web App</h3>
+	<p class="contents">
+	For this project, we are using the <span class="linker"><a href="http://flask.pocoo.org/" target="_blank">Flask</a></span> microframework because it is lightweight and does not require an external server such as Apache to be installed for running applications. Flask is easy to install.<br><br>
+	
+	<span class="coder"><code>&#36; pip install flask</code></span><br><br>
+	
+	Then we wrote our Flask application to render HTML webpages upon request. The application stores userID and password pairs in a dictionary to authenticate users on login. Once the login is successful, the application renders another HTML page which contains a form having buttons corresponding to direction/speed control and sends it back to the server using POST. The code for the web app can be found <span class="linker"><a href="https://github.com/rxhl/Big-Red-Bot" target="_blank">here</a></span>.</p><br>
+	
+	<h3 class="Heading">Motor Control</h3>
+	<p class="contents">
+	The final part includes rigging up the actual bot and interfacing the servos with the Pi. 	
+	
+		
+	</p>
+	
+	
+	<hr style="width: 100%">
+    <h2 class="Heading" id="result">Result &amp; Conclusion</h2>
+    <p class="contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
     <hr style="width: 100%">
     <h2 class="Heading" id="team">Team</h2>
-    <p class="contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+    <p class="contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
     <hr style="width: 100%">
     
     <footer>
-    <p class="contents">Let us know your views, suggestions or comments below.</p>      
+    <p class="contents">Thanks for visiting, let us know your views/suggestions/comments below.</p>      
     <div class="fb-comments" data-href="https://rxhl.github.io/Big-Red-Robot" data-numposts="5"></div>
-    <div id="footerText">&copy;2016 Rahul Sharma, Mahantesh Salimath</div>
+		<div class="linker" id="footerText">&copy;2016 <a href="https://www.facebook.com/xrx19" target="_blank">Rahul Sharma</a>, <a href="https://www.facebook.com/mahantesh.salimath.37" target="_blank">Mahantesh Salimath</a>
     </footer>
-          
-          
-          
-          
-          
     </div>   
     </div>    
         
-      
      <script src="js/script.js"></script>   
   </body>
 </html>
