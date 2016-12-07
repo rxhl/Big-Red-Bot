@@ -1,4 +1,4 @@
-html, body  {
+	html, body  {
 	margin: 0;
     padding: 0;
 }
@@ -150,6 +150,7 @@ img {
 .caption2 {
 	font-family: 'lato', sans-serif;
 	color: grey;
+	margin-top: 10px;
 	font-size: 0.9em;
 	text-align: center;
 }
@@ -173,14 +174,16 @@ img {
 }
 /*Flex Box end*/
 
-#pi {
-	height: 62%;
-	width: 62%;
+.pi {
+	height: 50%;
+	width: 50%;
+	vertical-align: top;
 }
 
 #bot{
-	height: 100%;
-	width: 100%;
+	height: 60%;
+	width: 60%;
+	vertical-align: top;
 }
 
 ul.lister {
@@ -188,8 +191,22 @@ ul.lister {
 	font-family: 'Open Sans', sans-serif;
 }
 
-#pic {
+.pic {
 	height: 200px;
 	width: 200px;
 	border-radius: 50%;
+	vertical-align: top;
+
+}
+
+.linepics {
+    display: inline-block;
+    margin: 20px; /* adjust as needed */
+}
+
+.pic2 {
+	height: 280px;
+	width: 350px;
+	vertical-align: top;
+
 }
