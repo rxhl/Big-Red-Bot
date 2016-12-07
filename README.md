@@ -1,2 +1,2 @@
 # [Big-Red-Bot](https://rxhl.github.io/Big-Red-Bot/)
-Raspberry Pi based bot, controlled using a Flask app. Built with love, at Cornell.
+A cross platform Raspberry Pi based bot application that can be run remotely simultaneously from upto ten devices. Also built a website to document the entire project.
