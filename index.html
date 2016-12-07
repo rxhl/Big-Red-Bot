@@ -31,14 +31,18 @@
     <hr style="width: 100%">
     <h2 class="Heading"	>Introduction</h2>
     <p class="contents">Playing with remote controlled gears is an engaging experience, which almost everyone has gone through while growing up. Taking the same essence forward, we built the Big-Red-Bot (BRB) which is a Raspberry Pi powered bot capable of being controlled by any device over Wi-Fi viz. laptop, tablet and mobile. The bot is controlled via a Flask app which is hosted on the Pi itself and commands can be sent to the bot through HTTP request from the user's device.<br><br>
-	As soon as a user accesses BRB's IP address, he/she is presented with a login screen. The user can access the maneuver dashboard only after a successful login. New users can be added only by admins. The bot, upon receiving the commands from the user, calls appropriate functions to control the two servo motors to go forward/backward/left/right and vary its speed. BRB also has a camera module attached to it that provides a live video feed of the path. 
+	As soon as a user accesses BRB's IP address, he/she is presented with a login screen. The user can access the maneuver dashboard only after a successful login. New users can be added only by admins. The bot, upon receiving the commands from the user, calls appropriate functions to control the two servo motors to go forward/backward/left/right and vary its speed. The bot also has a camera module attached to it that provides a live video feed of the path. 
 	</p><br><hr>
     <h2 class="Heading" id="design">Design &amp; Testing</h2>
 	<h3 class="Heading">Overview</h3>
-    <p class="contents">
-	The design and testing process is broadly divided in three phases - Network, Web App and Motor Control. Before we dive deep in any of them, below is a block diagram that summarizes the complete design process.<br><br>{block diagram}<br><br>
-	As shown above, Pi houses both the server (Flask) and the motor control module. Once the user successfully logs in, the server renders a HTML document containing a dashboard to control the bot as well as display the camera feed.
-	<br><br>{Dashboard screens}<br><br></p>
+    <p class="contents">The design and testing process is broadly divided in three phases - Network, Web App and Motor Control. Before we dive deep in any of them, below is a block diagram [Fig. 1] that summarizes the complete design process.</p>
+		
+	<figure>	
+	<img id="conn" src="" alt="Block Diagram">
+	<figcaption><span class="caption">Fig. 1. Block diagram of the system</span></figcaption>
+	</figure>
+		
+	<p class="contents">As shown above, Pi houses both the server (Flask) and the motor control module. Once the user successfully logs in, the server renders a HTML document containing a dashboard to control the bot as well as display the camera feed.<br></p>
 	<h3 class="Heading">Network</h3>
 	<p class="contents">
 	To provide wireless capabilities to the bot, we used the Edimax Wi-Fi module [1]. We implemented two types of network connections for this project i.e. Ad Hoc and regular Wi-Fi. The main advantage of Ad Hoc is that it does not require any external Wi-Fi to connect to the client. The client can simply join the Ad Hoc and access bot controls. This is particularly useful when the user wants to take the bot outdoors where there is no Wi-Fi. The steps to configure an Ad Hoc network [2] on Pi are below.<br><br>
@@ -87,28 +91,123 @@
 	<p class="contents">The Pi is now ready to communicate with the client. However, we observed that the Ad Hoc method worked successfully only with a PC and not any other platform. We were able to connect iOS and OS X devices to the Ad Hoc netowork hosted by the Pi but could not access the web application. To overcome this problem, we used both the Wi-Fi adapters available on the Pi. We configured <code>wlan0</code> for hosting an Ad Hoc network and <code>wlan1</code> as a regular client which would connect to an external Wi-Fi. So far, we have successfully set up our network and can move ahead to setting up our web application.</p><br>
 	
 	<h3 class="Heading">Web App</h3>
+	<p class="contents">The layout of the web application is as follows.</p>
+	
+	<ul class="lister">
+		<li>../control.html</li>
+		<li>../login.html</li>
+		<li>controller.py</li>
+		<li>server.py</li>
+		<li>run_test.py</li>
+	</ul>
+	
+	
 	<p class="contents">
+	<code>controller.py</code> is the main program that renders both the web pages. <code>login.html</code> is the first web page that gets loaded and checks for userID and password. Once authenticated, the next page loads which acts as a dashboard to control the bot. <code>run_test.py</code> contains the code for controlling motor by varying duty cycle. Due to this, we can keep our main program uncluttered and simply call <code>run_test.py</code> from <code>controller.py</code>. <code>server.py</code> is another script which was developed as an extension to this project. It basically logs all the details including users who logged in, the commands that they ran into a text file on a remote server.<br><br>
+	
 	For this project, we are using the <span class="linker"><a href="http://flask.pocoo.org/" target="_blank">Flask</a></span> microframework because it is lightweight and does not require an external server such as Apache to be installed for running applications. Flask is easy to install.<br><br>
 	
 	<span class="coder"><code>&#36; pip install flask</code></span><br><br>
 	
-	Then we wrote our Flask application to render HTML webpages upon request. The application stores userID and password pairs in a dictionary to authenticate users on login. Once the login is successful, the application renders another HTML page which contains a form having buttons corresponding to direction/speed control and sends it back to the server using POST. The code for the web app can be found <span class="linker"><a href="https://github.com/rxhl/Big-Red-Bot" target="_blank">here</a></span>.</p><br>
-	
-	<h3 class="Heading">Motor Control</h3>
-	<p class="contents">
-	The final part includes rigging up the bot chassis and interfacing the servos with the Pi. 	
-	
+	Then we wrote our Flask application to render HTML webpages upon request. The application stores userID and password pairs in a dictionary to authenticate users on login. Once the login is successful, the application renders another HTML page which contains a form having buttons corresponding to direction/speed control and sends it back to the server using POST. This page, rather a dashboard, is the primary interface to control the bot. It supports seven commands that can be sent to the bot.</p>
+
+	<ul class="lister">
+		<li>Forward</li>
+		<li>Backward</li>
+		<li>Right</li>
+		<li>Left</li>
+		<li>Fast</li>
+		<li>Slow</li>
+	</ul>
 		
-	</p>
+	<p class="contents">The layout of dashboard is shown in Fig. 2.</p>
+		
+	<figure>	
+	<img id="conn" src="" alt="dashboard">
+	<figcaption><span class="caption">Fig. 2. Dashboard application</span></figcaption>
+	</figure>
 	
-	
-	<hr style="width: 100%">
+	<br><h3 class="Heading">Motor Control</h3>
+	<p class="contents">
+	The final part includes rigging up the bot chassis and interfacing the servos with the Pi. A regular servo motor is designed for 180 degrees swing i.e. 90 degrees to left of neutral position, and 90 degrees to right. Continuous Rotation (CR) servos are a modified version in which the shaft can rotate continuously by essentially removing the physical hard-stops. CR servos behave like compact DC gear motor with built in H-Bridge driver and can be controlled through a pulsed signal (like PWM).<br><br>
+
+	For calibration, we send the servo a 1.5ms pulse refreshed every 20ms. Translating it into RPi, we use GPIO 19 to connect to the servo. The values for frequency and duty cycle are given below.<br><br>
+		
+	<code>Frequency = 1/(1.5 + 20) = 46.511 Hz</code><br>
+	<code>Duty cycle = 1.5/(1.5 + 20) = 6.97%</code><br><br>
+		
+	As the length of the pulse decreases from 1.5ms to 1.3ms, the servo will gradually rotate faster in the clockwise direction [3], as shown in Fig. 3.<br>
+	<figure>	
+	<img id="servo" src="img/servo.png" alt="servo motor">
+	<figcaption><span class="caption">Fig. 3. Full Speed clockwise rotation</span></figcaption>
+	</figure></p>
+		
+	<p class="contents">To express full speed clockwise rotation in terms of RPi.GPIO, we define our duty cycle as below.<br><br>
+
+	<code>Frequency = 1/(1.3 + 20) = 46.948 Hz</code><br>
+	<code>Duty cycle = 1.3/(1.3 + 20) = 6.10%</code><br><br>
+		
+	Similarly, as we increase the pulse width from 1.5ms to 1.7ms, the servo attains it maximum speed in the counter-clockwise direction and we get,<br><br>
+
+	<code>Frequency = 1/(1.7 + 20) = 46.082 Hz</code><br>
+	<code>Duty cycle = 1.7/(1.7 + 20) = 7.83%</code><br><br>
+		
+	The safe way to connect servo motors to Raspberry Pi is to power the motors through a 6V battery or a regulated power supply of 6V. In this project, we are using 4 AA batteries to power the motors and a 5V portable rechargeable battery for Pi. The motors should not be connected to an unregulated power supply as the varying voltage can damage them. A generic connection diagram is shown in Fig. 4.<br>
+		
+	<figure>	
+	<img id="conn" src="img/conn.png" alt="servo connection">
+	<figcaption><span class="caption">Fig. 4. Servo motor connected with Raspberry Pi</span></figcaption>
+	</figure></p>
+		
+	<p class="contents">In this project, we are using two servos that are connected to the GPIO pins 19 and 26 as shown in Fig. 5. Connecting the camera module is simple. We are using the official Raspberry Pi camera module v1, just connect it to the CSI port on the Pi and make sure it is enabled in the Pi configuration utility. Once the setup is complete, the bot should look like as in Fig. 6.</p>
+		
+	<div id="row">	
+		<div id="col1">
+		<figure><img id="pi" src="img/ckt.png" alt="circuit diagram">
+		<figcaption><span class="caption">Fig. 5. Raspberry Pi connection with servo motors</span></figcaption>
+		</figure></div>
+		
+		<div id="col2">
+		<figure><img id="bot" src="img/bot.png" alt="completed bot">
+		<figcaption><span class="caption">Fig. 6. Completed bot chassis</span></figcaption>
+		</figure></div>	
+	</div></p>
+	<hr>
     <h2 class="Heading" id="result">Result &amp; Conclusion</h2>
+    <p class="contents">The primary goals of the project were achieved and the bot performed as expected. We were able to login and control the bot simultaneously from a PC (through Ad Hoc) and Android device (through Wi-Fi). We tested the bot at different locations to check its range. In absence of any obstacle (wall etc), the bot could be controlled for upto 100 meters. In presence of obstacles, the distance reduced to 15-20 meters. Additionally, we found out that the video feed's frame rate gets reduced over Wi-Fi as compared to that on the Ad Hoc network.</p> 
+		
+	<h3 class="Heading">Future scope</h3>
+		
+	<ul class="lister">
+		<li>The bot can be used for home surveillance purposes. It can navigate through the house and repot any suspicious activity.</li>
+		<li>The bot can be employed for search and rescue operations at locations where it is hard for a human to go.</li>
+	</ul>
+
+    
+		
+	<hr>
+		
+	<h2 class="Heading" id="appendices">Appendices</h2>
     <p class="contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-    <hr style="width: 100%">
+    <hr>
+		
     <h2 class="Heading" id="team">Team</h2>
-    <p class="contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-    <hr style="width: 100%">
+	<div id="row">	
+		<div id="col1">
+		<figure><a href="https://linkedin.com/in/salimathmahantesh" target="_blank"><a href="https://linkedin.com/in/rs2376" target="_blank"><img id="pic" src="img/xrx.png" alt="Rahul Sharma"></a><figcaption class="caption2">Rahul Sharma</figcaption>
+		</figure></div>
+		
+		<div id="col2">
+		<figure><a href="https://linkedin.com/in/salimathmahantesh" target="_blank"><img id="pic" src="img/ms.jpg" alt="Mahantesh Salimath"></a>
+		<figcaption class="caption2">Mahantesh Salimath</figcaption>
+		</figure></div>	
+	</div>	
+			
+    <hr>
+		
+	<h2 class="Heading" id="ack">Acknowledgement</h2>
+    <p class="contents">We would like to acknowledge and thank Professor Joe Skovira for helping us throughout this project and for the wonderful class. We would also like to thank the fall 2016 TAs - Brandon, Jingyao and Jay for their support.</p> 
+    <hr>
     
     <footer>
     <p class="contents">Thanks for visiting, let us know your views/suggestions/comments below.</p>      
