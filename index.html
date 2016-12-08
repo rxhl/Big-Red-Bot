@@ -38,7 +38,7 @@
     <p class="contents">The design and testing process is broadly divided in three phases - Network, Web App and Motor Control. Before we dive deep in any of them, below is a block diagram [Fig. 1] that summarizes the complete design process.</p>
 		
 	<figure>	
-	<img id="conn" src="" alt="Block Diagram">
+	<img class="conn" src="" alt="Block Diagram">
 	<figcaption><span class="caption">Fig. 1. Block diagram of the system</span></figcaption>
 	</figure>
 		
@@ -46,7 +46,7 @@
 	<h3 class="Heading">Network</h3>
 	<p class="contents">
 	To provide wireless capabilities to the bot, we used the Edimax Wi-Fi module [1]. We implemented two types of network connections for this project i.e. Ad Hoc and regular Wi-Fi. The main advantage of Ad Hoc is that it does not require any external Wi-Fi to connect to the client. The client can simply join the Ad Hoc and access bot controls. This is particularly useful when the user wants to take the bot outdoors where there is no Wi-Fi. The steps to configure an Ad Hoc network [2] on Pi are below.<br><br>
-	First, open the network interfaces file for editing.
+	First, open the network interfaces file for editing.</p>
 		
 	<div class="coder"><code>&#36; sudo nano /etc/network/interfaces</code></div>
 		
@@ -158,7 +158,7 @@
 	The safe way to connect servo motors to Raspberry Pi is to power the motors through a 6V battery or a regulated power supply of 6V. In this project, we are using 4 AA batteries to power the motors and a 5V portable rechargeable battery for Pi. The motors should not be connected to an unregulated power supply as the varying voltage can damage them. A generic connection diagram is shown in Fig. 4.<br></p>
 		
 	<figure>	
-	<img id="conn" src="img/conn.png" alt="servo connection">
+	<img class="conn" src="img/conn.png" alt="servo connection">
 	<figcaption><span class="caption">Fig. 4. Servo motor connected with Raspberry Pi</span></figcaption>
 	</figure>
 		
@@ -172,7 +172,6 @@
 		<figcaption class="caption2">Fig. 6. Completed bot chassis</figcaption>
 		</figure>	
 		
-	</p>
 	<hr>
     <h2 class="Heading" id="result">Result &amp; Conclusion</h2>
     <p class="contents">The primary goals of the project were achieved and the bot performed as expected. We were able to login and control the bot simultaneously from a PC (through Ad Hoc) and Android device (through Wi-Fi). We tested the bot at different locations to check its range. In absence of any obstacle (wall etc), the bot could be controlled for upto 100 meters. In presence of obstacles, the distance reduced to 15-20 meters. Additionally, we found out that the video feed's frame rate gets reduced over Wi-Fi as compared to that on the Ad Hoc network. The video feed screen and the backend server log are shown in Fig. 7 and 8 respectively.</p> 
@@ -297,7 +296,7 @@
 		<div class="linker" id="footerText">&copy;2016 <a href="https://www.facebook.com/xrx19" target="_blank">Rahul Sharma</a>, <a href="https://www.facebook.com/mahantesh.salimath.37" target="_blank">Mahantesh Salimath</a></div>
     </footer>   
     </div>   
-        
-     <script src="js/script.js"></script>   
+	</div>    
   </body>
+<script src="js/script.js"></script> 
 </html>
