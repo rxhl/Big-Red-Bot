@@ -38,11 +38,11 @@
     <p class="contents">The design and testing process is broadly divided in three phases - Network, Web App and Motor Control. Before we dive deep in any of them, below is a block diagram [Fig. 1] that summarizes the complete design process.</p>
 		
 	<figure>	
-	<img class="conn" src="" alt="Block Diagram">
+	<img class="bd" src="img/bd.png" alt="Block Diagram">
 	<figcaption><span class="caption">Fig. 1. Block diagram of the system</span></figcaption>
 	</figure>
 		
-	<p class="contents">As shown above, Pi houses both the server (Flask) and the motor control module. Once the user successfully logs in, the server renders a HTML document containing a dashboard to control the bot as well as display the camera feed.<br></p>
+	<p class="contents">As shown above, Pi houses both the server (Flask) and the motor control module. Once the user successfully logs in, the server renders a HTML document containing a dashboard. The user can then login and send HTTP requests which Flask can parse to control the motors. The user can access the video feed on a different port. The backend server can be run on the same (or different device) to keep a log.<br></p>
 	<h3 class="Heading">Network</h3>
 	<p class="contents">
 	To provide wireless capabilities to the bot, we used the Edimax Wi-Fi module [1]. We implemented two types of network connections for this project i.e. Ad Hoc and regular Wi-Fi. The main advantage of Ad Hoc is that it does not require any external Wi-Fi to connect to the client. The client can simply join the Ad Hoc and access bot controls. This is particularly useful when the user wants to take the bot outdoors where there is no Wi-Fi. The steps to configure an Ad Hoc network [2] on Pi are below.<br><br>
@@ -269,6 +269,11 @@
 	<p class="contents"><span class="linker"><a href="http://www.edimax.com/edimax/merchandise/merchandise_detail/data/edimax/in/wireless_adapters_n150/ew-7811un/" target="_blank">[1] Edimax Wi-Fi adapter specifications</a></span><br><br>
 	<span class="linker"><a href="https://spin.atomicobject.com/2013/04/22/raspberry-pi-wireless-communication/" target="_blank">[2] Configuring Ad Hoc network on Raspberry Pi</a></span><br><br>
 	<span class="linker"><a href="https://www.parallax.com/sites/default/files/downloads/900-00008-Continuous-Rotation-Servo-Documentation-v2.2.pdf" target="_blank">[3] Parallax Continuous Rotation Servo (#900-00008) Datasheet</a></span><br><br>
+	
+	<span class="linker"><a href="http://flask.pocoo.org/" target="_blank">Getting started with Flask</a></span><br><br>
+	<span class="linker"><a href="http://elinux.org/RPi-Cam-Web-Interface" target="_blank">Web interface for RPi camera module</a></span><br><br>
+	<span class="linker"><a href="http://docs.python-requests.org/en/master/" target="_blank">Requests: HTTP for Humans</a></span><br><br>
+	
 	<span class="linker"><a href="http://www.springer.com/us/book/9781447166023" target="_blank">Embedded OS - A Practical Approach textbook</a></span><br><br>
 	Lecture slides</p>
     

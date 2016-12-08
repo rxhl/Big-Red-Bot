@@ -141,6 +141,11 @@ img {
 	width: 40%;
 }
 
+.bd {
+	height: 75%;
+	width: 75%;
+}
+
 .caption {
 	font-family: 'lato', sans-serif;
 	color: grey;
