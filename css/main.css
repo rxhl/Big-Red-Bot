@@ -210,3 +210,38 @@ ul.lister {
 	vertical-align: top;
 
 }
+
+.pic3 {
+	height: 280px;
+	width: 400px;
+	vertical-align: top;
+
+}
+
+#vid {
+	box-shadow: 3px 3px 3px grey;
+	
+}
+
+table {
+	border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+	font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+	font-family: 'Oswald', sans-serif;
+	text-align: left;
+	background-color: lightgrey;
+	padding: 8px;
+}
+
+.total {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+}
