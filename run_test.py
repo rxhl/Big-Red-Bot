@@ -113,31 +113,5 @@ def Slw():
     update()
     return
 
-#The run-test program
-def run_test():
-    frwrd()
-    time.sleep(3)
-    stp()
-    time.sleep(1)
-    bkwrd()
-    time.sleep(3)
-    stp()
-    time.sleep(1)
-    lft()
-    time.sleep(2)
-    stp()
-    time.sleep(1)
-    rgt()
-    time.sleep(2)
-    stp()
-    time.sleep(1)
-    return
-        
-
-
-# start the main loop
-if __name__ == '__main__':
-    run_test()
-
     
     
