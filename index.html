@@ -174,7 +174,7 @@
 		
 	<hr>
     <h2 class="Heading" id="result">Result &amp; Conclusion</h2>
-    <p class="contents">The primary goals of the project were achieved and the bot performed as expected. We were able to login and control the bot simultaneously from a PC (through Ad Hoc) and Android device (through Wi-Fi). We tested the bot at different locations to check its range. In absence of any obstacle (wall etc), the bot could be controlled for upto 100 meters. In presence of obstacles, the distance reduced to 15-20 meters. Additionally, we found out that the video feed's frame rate gets reduced over Wi-Fi as compared to that on the Ad Hoc network. The video feed screen and the backend server log are shown in Fig. 7 and 8 respectively.</p> 
+    <p class="contents">The primary goals of the project were achieved and the bot performed as expected. We were able to login and control the bot simultaneously from a PC (through Ad Hoc) and Android device (through Wi-Fi). We tested the bot at different locations to check its range. In absence of any obstacle (wall etc), the bot could be controlled for upto 100 meters. In presence of obstacles, the distance reduced to 15-20 meters. We also implemented an auto-stop function that would stop the Pi automatically if it does not receive any command from the user within 5 seconds. Additionally, we found out that the video feed's frame rate gets reduced over Wi-Fi as compared to that on the Ad Hoc network. The video feed screen and the backend server log are shown in Fig. 7 and 8 respectively.</p> 
 		
 	<figure class="linepics"><img class="pic2" src="img/campic2.png" alt="video feed"><figcaption class="caption2">Fig. 7. Video feed from the camera module</figcaption>
 		</figure>
@@ -202,9 +202,9 @@
 	<ul class="lister">
 		<li>Download the project repo on your Pi.</li>
 		<li><code>cd ~/../Big-Red-Bot</code></li>
-		<li><code>sudo python controller.py</code></li>
+		<li><code>&#36; sudo python controller.py</code></li>
 		<li>On your device, goto http://a.b.c.d:800, where a.b.c.d is the IP address of your Pi.</li>
-		<li>For the video feed, goto http://a.b.c.d:webopi</li>
+		<li>For the video feed, goto http://a.b.c.d/webopi</li>
 		<li>Enjoy&#33;</li>
 	</ul>
 		
@@ -252,6 +252,13 @@
     <td>4</td>
 	<td>1.60</td>
   </tr>
+	</tr>
+	<tr>
+    <td>RPi camera module</td>
+    <td>19.95</td>
+    <td>1</td>
+	<td>19.95</td>
+  </tr>
 	<tr>
     <td></td>
     <td></td>
@@ -262,7 +269,7 @@
     <td class="total">Total amount</td>
     <td></td>
     <td></td>
-	<td class="total">61.49</td>
+	<td class="total">81.44</td>
   </tr>
 </table>	
 	<h3 class="Heading">E. References</h3>	
