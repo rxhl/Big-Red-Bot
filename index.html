@@ -139,11 +139,11 @@
 	<code>Frequency = 1/(1.5 + 20) = 46.511 Hz</code><br>
 	<code>Duty cycle = 1.5/(1.5 + 20) = 6.97%</code><br><br>
 		
-	As the length of the pulse decreases from 1.5ms to 1.3ms, the servo will gradually rotate faster in the clockwise direction [3], as shown in Fig. 3.<br>
+	As the length of the pulse decreases from 1.5ms to 1.3ms, the servo will gradually rotate faster in the clockwise direction [3], as shown in Fig. 3.<br></p>
 	<figure>	
 	<img id="servo" src="img/servo.png" alt="servo motor">
 	<figcaption><span class="caption">Fig. 3. Full Speed clockwise rotation</span></figcaption>
-	</figure></p>
+	</figure>
 		
 	<p class="contents">To express full speed clockwise rotation in terms of RPi.GPIO, we define our duty cycle as below.<br><br>
 
@@ -155,12 +155,12 @@
 	<code>Frequency = 1/(1.7 + 20) = 46.082 Hz</code><br>
 	<code>Duty cycle = 1.7/(1.7 + 20) = 7.83%</code><br><br>
 		
-	The safe way to connect servo motors to Raspberry Pi is to power the motors through a 6V battery or a regulated power supply of 6V. In this project, we are using 4 AA batteries to power the motors and a 5V portable rechargeable battery for Pi. The motors should not be connected to an unregulated power supply as the varying voltage can damage them. A generic connection diagram is shown in Fig. 4.<br>
+	The safe way to connect servo motors to Raspberry Pi is to power the motors through a 6V battery or a regulated power supply of 6V. In this project, we are using 4 AA batteries to power the motors and a 5V portable rechargeable battery for Pi. The motors should not be connected to an unregulated power supply as the varying voltage can damage them. A generic connection diagram is shown in Fig. 4.<br></p>
 		
 	<figure>	
 	<img id="conn" src="img/conn.png" alt="servo connection">
 	<figcaption><span class="caption">Fig. 4. Servo motor connected with Raspberry Pi</span></figcaption>
-	</figure></p>
+	</figure>
 		
 	<p class="contents">In this project, we are using two servos that are connected to the GPIO pins 19 and 26 as shown in Fig. 5. Connecting the camera module is simple. We are using the official Raspberry Pi camera module v1, just connect it to the CSI port on the Pi and make sure it is enabled in the Pi configuration utility. Once the setup is complete, the bot should look like as in Fig. 6.</p>
 		
@@ -294,9 +294,9 @@
     <footer>
     <p class="contents">Thanks for visiting, let us know your views/suggestions/comments below.</p>      
     <div class="fb-comments" data-href="https://rxhl.github.io/Big-Red-Robot" data-numposts="5"></div>
-		<div class="linker" id="footerText">&copy;2016 <a href="https://www.facebook.com/xrx19" target="_blank">Rahul Sharma</a>, <a href="https://www.facebook.com/mahantesh.salimath.37" target="_blank">Mahantesh Salimath</a>
+		<div class="linker" id="footerText">&copy;2016 <a href="https://www.facebook.com/xrx19" target="_blank">Rahul Sharma</a>, <a href="https://www.facebook.com/mahantesh.salimath.37" target="_blank">Mahantesh Salimath</a></div>
     </footer>   
-    </div></div>   
+    </div>   
         
      <script src="js/script.js"></script>   
   </body>
