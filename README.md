@@ -6,6 +6,7 @@ Assuming you have built the bot, follow these steps.
 
 1. Download the project repo on your Pi.
 2. ```cd ~/../Big-Red-Bot```
-3. On your device, goto http://a.b.c.d:800, where a.b.c.d is the IP address of your Pi.
-4. For the video feed, goto http://a.b.c.d/webopi
-5. Enjoy!
+3. ```$ sudo python controller.py```
+4. On your device, goto http://a.b.c.d:800, where a.b.c.d is the IP address of your Pi.
+5. For the video feed, goto http://a.b.c.d/webopi
+6. Enjoy!
