@@ -1,5 +1,7 @@
-# [Big-Red-Bot](https://rxhl.github.io/Big-Red-Bot/)
+# [Big-Red-Bot]
 A cross platform Raspberry Pi based bot application that can be run remotely simultaneously from upto ten devices. 
+
+https://courses.ece.cornell.edu/ece5990/ECE5725_Fall2016_Projects/ms3368_rs2376/index.html
 
 ### How to run Big-Red-Bot
 Assuming you have built the bot, follow these steps.
